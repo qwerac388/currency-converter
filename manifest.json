@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "ig.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["https://www.google.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/", "https://*/*", "http://*/"],
+      "js": ["index.js"]
+    }
+  ]
+}
