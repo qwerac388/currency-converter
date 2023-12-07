@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "Currency Converter",
+  "description": "A simple and easy currency converter widget.",
   "version": "1.0",
   "action": {
     "default_popup": "index.html",
-    "default_icon": "ig.png"
+    "default_icon": "cc_icon.png"
   },
   "web_accessible_resources": [
     {
