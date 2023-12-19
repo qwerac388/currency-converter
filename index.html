@@ -5,35 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Currency Converter - A simple and easy to get exchgange rate.</title>
+
+    <link rel="icon" href="money.png" type="image/x-icon" />
+    <title>Currency Converter</title>
   </head>
   <body>
-    <div class="h1">Find Exchange Rate</div>
-    <select id="have">
-      <div class="currency">
-        <option value="USD">USD - United States Dollar</option>
-        <option value="CAD">CAD - Canadian Dollar</option>
-        <option value="EUR">EUR - Euro</option>
-        <option value="JPY">JPY - Japanese Yen</option>
-        <option value="CNY">CNY - Chinese Yuan</option>
-        <option value="GBP">GBP - British Pound</option>
-        <option value="CHF">CHF - Swiss Franc</option>
-        <option value="NZD">NZD - New Zealand Dollar</option>
-        <option value="AUD">AUD - Australian Dollar</option>
-        <option value="KRW">KRW - South Korean Won</option>
-        <option value="PLN">PLN - Polish Zloty</option>
-        <option value="DKK">DKK - Danish Krone</option>
-        <option value="TRY">TRY Turkish New Lira</option>
-        <option value="HKD">HKD - Hong Kong Dollar</option>
-        HKD Hong Kong Dollar
+    <div class="container">
+      <div class="logo">
+        <video src="logo.mp4" autoplay muted>
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </select>
-    <input type="number" id="amount" placeholder="?" value="1" />
+
+      <div class="input-field">
+        <input
+          type="number"
+          min="0.1"
+          id="amount"
+          placeholder="Enter the amount in HKD"
+        />
+      </div>
+      <select id="currency">
+        <option value="AUD">AUD (Australian Dollar)</option>
+        <option value="CAD">CAD (Canadian Dollar)</option>
+        <option value="CHF">CHF (Swiss Franc)</option>
+        <option value="CNY">CNY (Chinese Yuan)</option>
+        <option value="DKK">DKK (Danish Krone)</option>
+        <option value="EUR">EUR (Euro)</option>
+        <option value="GBP">GBP (British Pound)</option>
+        <option value="JPY">JPY (Japanese Yen)</option>
+        <option value="KRW">KRW (South Korean Won)</option>
+        <option value="PLN">PLN (Polish Zloty)</option>
+        <option value="TRY">TRY (Turkish New Lira)</option>
+        <option value="USD">USD (United States Dollar)</option>
+      </select>
+      <button id="convert">Convert Currency</button>
+      <p class="error">
+        ERROR : Accept only amount larger than zero, please try again.
+      </p>
+      <div class="pending"><div class="dot-elastic"></div></div>
+      <div class="result"></div>
+    </div>
+    <script src="index.js"></script>
+
   </body>
 </html>
