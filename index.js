@@ -91,3 +91,4 @@ function hidePending() {
   const pending = document.querySelector(".pending");
   pending.style.display = "none";
 }
+
