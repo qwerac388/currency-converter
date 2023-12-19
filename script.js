@@ -25,9 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const currencyKey = Object.keys(currencyList); // ["KTL", "ISL", ... ]
   const swapButton = document.querySelector("#swapButton");
   async function convert() {
+    if (!amount.value > 0) {
+      amount.value = "0";
+    }
     const API_KEY = "8shmkmy3KkvULZ75astEag==35ewYVYXu1rMDZy2";
     const API = `https://api.api-ninjas.com/v1/convertcurrency?want=${want.value}&have=${have.value}&amount=${amount.value}`;
-
     try {
       const response = await fetch(API, {
         method: "GET",

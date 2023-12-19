@@ -1,13 +1,11 @@
 {
   "manifest_version": 3,
-
-  "name": "Currency-Converter",
-  "description": "Group 2 Project",
+  "name": "Currency Converter",
+  "description": "A simple and easy currency converter widget.",
   "version": "1.0",
   "action": {
     "default_popup": "index.html",
     "default_icon": "money.png"
-
   },
   "web_accessible_resources": [
     {
@@ -18,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://*/", "https://*/*", "http://*/"],
-      "js": ["index.js"]
+      "js": ["script.js"]
     }
   ]
 }
