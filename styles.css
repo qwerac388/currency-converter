@@ -1,5 +1,4 @@
 body {
-
   color: #4f5565;
   font-family: sans-serif;
   /* color: #fbd303;
@@ -198,3 +197,129 @@ button:active {
     transform: scale(1, 1);
   }
 }
+
+.disclaimer {
+  font-size: 10px;
+  line-height: 5px;
+  text-align: right;
+}
+
+a:link {
+  color: #4f5565;
+}
+a:visited {
+  color: #4f5565;
+}
+a:hover {
+  font-weight: 600;
+}
+a:active {
+  color: #f8b517;
+  font-weight: 600;
+}
+.container {
+  margin: 5% 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  padding: 10px;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+  padding: 10px 0px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  background: #ffffff50;
+  color: #4f5565;
+  border: none;
+  box-shadow: 0 0 0 0.1em inset #f8b517;
+}
+
+/* button effects */
+#swapButton {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50px;
+  color: #4f5565;
+  --c: #f8b517; /* the color*/
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 0.1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+#swapButton:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+}
+#swapButton:active {
+  box-shadow: 0 0 9e9Q inset #0009;
+  background-color: var(--c);
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  padding: 5px;
+  border-radius: 15px;
+  background: #ffffff50;
+  color: #4f5565;
+  border: none;
+  box-shadow: 0 0 0 0.1em inset #f8b517;
+}
+
+#result {
+  text-align: right;
+  grid-area: 2/3/3/4;
+  padding: 5px 20px;
+  color: #4f5565;
+  border: none;
+  box-shadow: 0 0 0 0.1em inset #f8b517;
+  border-radius: 15px;
+  background: #f2dca2;
+}
+
+/* .dot-elastic
+.dot-elastic {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f8b517;
+  color: #f8b517;
+  animation: dot-elastic 1s infinite linear;
+}
+.dot-elastic::before,
+.dot-elastic::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-elastic::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f8b517;
+  color: #f8b517;
+  animation: dot-elastic-before 1s infinite linear;
+}
+.dot-elastic::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f8b517;
+  color: #f8b517;
+  animation: dot-elastic-after 1s infinite linear;
+} */
