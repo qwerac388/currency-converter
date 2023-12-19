@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!amount.value > 0) {
       amount.value = "0";
     }
-    const API_KEY = "8shmkmy3KkvULZ75astEag==35ewYVYXu1rMDZy2";
+    const API_KEY = "Qc6wXrJlxSUOGKPSCh7sKQ==xcg9DeboFXvRWrLj";
     const API = `https://api.api-ninjas.com/v1/convertcurrency?want=${want.value}&have=${have.value}&amount=${amount.value}`;
     try {
       const response = await fetch(API, {
